@@ -44,7 +44,7 @@ pipeline {
                                     steps {
                                         input 'Does the Stagging env look OK?'
                                         milestone (1)
-                                        withCredentials([usernamePassword(credendialsId: 'webserver_login' , usernameVariable: 'USERNAME',passwordVariable: 'USERPASS')]{
+                                        withCredentials([usernamePassword(credendialsId: 'webserver_login' , usernameVariable: 'USERNAME',passwordVariable: 'USERPASS')]){
                     sshPublisher (
                         failOnError : true,
                         ContinueOnError : false,
@@ -66,5 +66,5 @@ pipeline {
                             ]
                         )
                                         }}  } } 
-                                        
+}
                                     
