@@ -49,8 +49,8 @@ pipeline {
                         failOnError : true,
                         continueOnError : false,
                         publishers: [
-                            sshPublisherDesc (
-                                configName: 'staging',
+                            sshPublisherDesc(
+                                configName: 'production',
                                 sshCredential : [
                                     username : "$USERNAME",
                                     encryptedPasspharse: "$USERPASS" ],
